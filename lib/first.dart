@@ -4,6 +4,7 @@ import 'image.dart';
 import 'timer.dart';
 import 'guide.dart';
 import 'inputs.dart';
+import 'twitter/main.dart';
 
 class First extends StatefulWidget {
   @override
@@ -25,6 +26,15 @@ class _FirstState extends State<First> {
                 "Bem vindo",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.amber),
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("TextInput"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TwitterApp()) );
+                },
+                color: Colors.amber,
               ),
             ),
             Center(
