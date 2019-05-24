@@ -5,7 +5,8 @@ import 'timer.dart';
 import 'guide.dart';
 import 'inputs.dart';
 import 'twitter/main.dart';
-import 'whatsapp/main.dart'
+import 'whatsapp/main.dart';
+import 'TodoAppUI/main.dart';
 
 class First extends StatefulWidget {
   @override
@@ -27,6 +28,15 @@ class _FirstState extends State<First> {
                 "Bem vindo",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.amber),
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("TodoApp UI"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TodoApp()) );
+                },
+                color: Colors.amber,
               ),
             ),
             Center(
