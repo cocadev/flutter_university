@@ -5,6 +5,7 @@ import 'timer.dart';
 import 'guide.dart';
 import 'inputs.dart';
 import 'twitter/main.dart';
+import 'whatsapp/main.dart'
 
 class First extends StatefulWidget {
   @override
@@ -30,7 +31,16 @@ class _FirstState extends State<First> {
             ),
             Center(
               child: RaisedButton(
-                child: Text("TextInput"),
+                child: Text("WhatsApp"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => WhatsApp()) );
+                },
+                color: Colors.amber,
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("Twitter"),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => TwitterApp()) );
                 },
