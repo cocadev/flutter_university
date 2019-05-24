@@ -7,6 +7,7 @@ import 'inputs.dart';
 import 'twitter/main.dart';
 import 'whatsapp/main.dart';
 import 'TodoAppUI/main.dart';
+import 'FlightSearch/main.dart';
 
 class First extends StatefulWidget {
   @override
@@ -28,6 +29,15 @@ class _FirstState extends State<First> {
                 "Bem vindo",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.amber),
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("Flight Search App"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => FlightSearchApp()) );
+                },
+                color: Colors.amber,
               ),
             ),
             Center(
