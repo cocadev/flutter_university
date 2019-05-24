@@ -8,6 +8,7 @@ import 'twitter/main.dart';
 import 'whatsapp/main.dart';
 import 'TodoAppUI/main.dart';
 import 'FlightSearch/main.dart';
+import 'chess/main.dart';
 
 class Router extends StatefulWidget {
   @override
@@ -23,7 +24,6 @@ class _RouterState extends State<Router> {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-
             new Container(
               margin:
                   const EdgeInsets.only(top: 12.0, bottom: 10.0, left: 10.0),
@@ -40,49 +40,63 @@ class _RouterState extends State<Router> {
             new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: Column(children: <Widget>[
-              RaisedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => FlightSearchApp()));
-                },
-                child: const Text('Goto FlightSearchApp',
-                    style: TextStyle(fontSize: 20)),
-                color: Colors.lightBlue,
-                textColor: Colors.white,
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => TodoApp()));
-                },
-                child:
-                    const Text('Goto TodoApp', style: TextStyle(fontSize: 20)),
-                color: Colors.lightBlue,
-                textColor: Colors.white,
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => WhatsApp()));
-                },
-                child:
-                    const Text('Goto WhatsApp', style: TextStyle(fontSize: 20)),
-                color: Colors.lightBlue,
-                textColor: Colors.white,
-              ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => TwitterApp()));
-                },
-                child: const Text('Goto TwitterApp',
-                    style: TextStyle(fontSize: 20)),
-                color: Colors.lightBlue,
-                textColor: Colors.white,
-              ),
-            ]))
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyChessApp()));
+                    },
+                    child: const Text('Goto Chess Game',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FlightSearchApp()));
+                    },
+                    child: const Text('Goto FlightSearchApp',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => TodoApp()));
+                    },
+                    child: const Text('Goto TodoApp',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => WhatsApp()));
+                    },
+                    child: const Text('Goto WhatsApp',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TwitterApp()));
+                    },
+                    child: const Text('Goto TwitterApp',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                ]))
 
 //            Center(
 //              child: RaisedButton(
