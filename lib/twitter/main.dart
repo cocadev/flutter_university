@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-//import 'messages_page.dart';
-//import 'notification_page.dart';
-//import 'search_page.dart';
-//import 'user_feed_page.dart';
+import 'messages_page.dart';
+import 'notification_page.dart';
+import 'search_page.dart';
+import 'user_feed_page.dart';
 
-import '../image.dart';
-import '../timer.dart';
-import '../guide.dart';
-import '../inputs.dart';
 
 class TwitterApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -37,15 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
   var selectedPageIndex = 0;
 
   var pages = [
-      Inputs(),
-      MyTimerApp(),
-      Guide(),
-      ImageScreen()
-
-//    UserFeedPage(),
-//    SearchPage(),
-//    NotificationPage(),
-//    MessagesPage(),
+    UserFeedPage(),
+    SearchPage(),
+    NotificationPage(),
+    MessagesPage(),
   ];
 
   @override
