@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'first.dart';
+import 'router.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: First(),
+      home: Router(),
     );
   }
 }
