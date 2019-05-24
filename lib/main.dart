@@ -1,10 +1,43 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new TimerAppState();
+  }
+}
+
+class TimerAppState extends State<MyApp> {
+  static const duration = const Duration(seconds: 1);
+
+  int secondsPassed = 0;
+  bool isActive = false;
+
+  Timer timer;
+
+  void handleTick() {
+    if (isActive) {
+      setState(() {
+        secondsPassed = secondsPassed + 1;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    if (timer == null)
+      timer = Timer.periodic(duration, (Timer t) {
+        handleTick();
+      });
+
+    int seconds = secondsPassed % 60;
+    int minutes = secondsPassed ~/ 60;
+    int hours = secondsPassed ~/ (60 * 60);
+
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
@@ -18,17 +51,19 @@ class MyApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CustomTextContainer(label: 'HRS'),
-                  CustomTextContainer(label: 'MIN'),
-                  CustomTextContainer(label: 'SEC'),
+                  CustomTextContainer(label: 'HRS', value: hours.toString().padLeft(2, '0')),
+                  CustomTextContainer(label: 'MIN', value: minutes.toString().padLeft(2, '0')),
+                  CustomTextContainer(label: 'SEC', value: seconds.toString().padLeft(2, '0')),
                 ],
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),
                 child: RaisedButton(
-                  child: Text('START'),
+                  child: Text(isActive ? 'STOP' : 'START'),
                   onPressed: () {
-
+                    setState(() {
+                      isActive = !isActive;
+                    });
                   },
                 ),
               ),
@@ -66,7 +101,7 @@ class CustomTextContainer extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Text(
-            '00',
+            '$value',
             style: TextStyle(
               color: Colors.white,
               fontSize: 54,
