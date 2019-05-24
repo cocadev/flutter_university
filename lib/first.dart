@@ -3,6 +3,7 @@ import 'second.dart';
 import 'image.dart';
 import 'timer.dart';
 import 'guide.dart';
+import 'inputs.dart';
 
 class First extends StatefulWidget {
   @override
@@ -24,6 +25,15 @@ class _FirstState extends State<First> {
                 "Bem vindo",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.amber),
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("TextInput"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Inputs()) );
+                },
+                color: Colors.amber,
               ),
             ),
             Center(
