@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'second.dart';
 import 'image.dart';
 import 'timer.dart';
+import 'guide.dart';
 
 class First extends StatefulWidget {
   @override
@@ -23,6 +24,15 @@ class _FirstState extends State<First> {
                 "Bem vindo",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.amber),
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text("Guide"),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Guide(title:'Beginner Guide')) );
+                },
+                color: Colors.amber,
               ),
             ),
             Center(
