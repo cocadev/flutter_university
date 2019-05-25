@@ -9,6 +9,7 @@ import 'whatsapp/main.dart';
 import 'TodoAppUI/main.dart';
 import 'FlightSearch/main.dart';
 import 'chess/main.dart';
+import 'easyPip/main.dart';
 
 class Router extends StatefulWidget {
   @override
@@ -40,6 +41,16 @@ class _RouterState extends State<Router> {
             new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: Column(children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => EasyPipApp()));
+                    },
+                    child: const Text('Goto EasyPiP',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
                   RaisedButton(
                     onPressed: () {
                       Navigator.push(
