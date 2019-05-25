@@ -10,6 +10,9 @@ import 'TodoAppUI/main.dart';
 import 'FlightSearch/main.dart';
 import 'chess/main.dart';
 import 'easyPip/main.dart';
+import 'YouTube/main.dart';
+import 'Randomize/main.dart';
+import 'FlutterBoxBar/main.dart';
 
 class Router extends StatefulWidget {
   @override
@@ -41,6 +44,36 @@ class _RouterState extends State<Router> {
             new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: Column(children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BoxApp()));
+                    },
+                    child: const Text('Goto BoxBar',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Randomize()));
+                    },
+                    child: const Text('Goto Randomize',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => YoutubeApp()));
+                    },
+                    child: const Text('Goto YoutubeApp',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
                   RaisedButton(
                     onPressed: () {
                       Navigator.push(context,
