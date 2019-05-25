@@ -14,6 +14,7 @@ import 'YouTube/main.dart';
 import 'Randomize/main.dart';
 import 'FlutterBoxBar/main.dart';
 import 'SimpleAnimation/main.dart';
+import 'ButterCMS/main.dart';
 
 class Router extends StatefulWidget {
   @override
@@ -45,6 +46,16 @@ class _RouterState extends State<Router> {
             new Container(
                 margin: const EdgeInsets.all(10.0),
                 child: Column(children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => ButterCMSApp()));
+                    },
+                    child: const Text('Goto ButterCMS',
+                        style: TextStyle(fontSize: 20)),
+                    color: Colors.lightBlue,
+                    textColor: Colors.white,
+                  ),
                   RaisedButton(
                     onPressed: () {
                       Navigator.push(context,
