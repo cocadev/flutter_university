@@ -3,6 +3,7 @@ import 'router.dart';
 
 import 'WidgetUniversity/text_widget.dart';
 import 'WidgetUniversity/stack_widget.dart';
+import 'WidgetUniversity/row_widget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         'Text': (BuildContext context) => TextWidget(),
         'Stack': (BuildContext context) => StackWidget(),
+        'Row': (BuildContext context) => RowWidget(),
 
       },
     );
