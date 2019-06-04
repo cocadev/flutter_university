@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'router.dart';
 
 import 'WidgetUniversity/text_widget.dart';
-import 'whatsapp/main.dart';
-import 'TodoAppUI/main.dart';
-import 'FlightSearch/main.dart';
-import 'YouTube/main.dart';
-import 'Randomize/main.dart';
-import 'FlutterBoxBar/main.dart';
+import 'WidgetUniversity/stack_widget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -24,17 +19,8 @@ class MyApp extends StatelessWidget {
       home: new HomePage(),
       routes: <String, WidgetBuilder>{
         'Text': (BuildContext context) => TextWidget(),
-        'Appbar': (BuildContext context) => WhatsApp(),
-        'Container' : (BuildContext context) => TodoApp(),
-        'Column' : (BuildContext context) => FlightSearchApp(),
-        'Row' : (BuildContext context) => YoutubeApp(),
-        'Button' : (BuildContext context) => Randomize(),
-        'Stack2q' : (BuildContext context) => BoxApp(),
-        'Stack1' : (BuildContext context) => BoxApp(),
-        'Stack2' : (BuildContext context) => BoxApp(),
-        'Stack3' : (BuildContext context) => BoxApp(),
-        'Stack4' : (BuildContext context) => BoxApp(),
-        'Stack5' : (BuildContext context) => BoxApp(),
+        'Stack': (BuildContext context) => StackWidget(),
+
       },
     );
   }
