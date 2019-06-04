@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'router.dart';
 
-import 'twitter/main.dart';
+import 'WidgetUniversity/text_widget.dart';
 import 'whatsapp/main.dart';
 import 'TodoAppUI/main.dart';
 import 'FlightSearch/main.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       home: new HomePage(),
       routes: <String, WidgetBuilder>{
-        'Text': (BuildContext context) => TwitterApp(),
+        'Text': (BuildContext context) => TextWidget(),
         'Appbar': (BuildContext context) => WhatsApp(),
         'Container' : (BuildContext context) => TodoApp(),
         'Column' : (BuildContext context) => FlightSearchApp(),
