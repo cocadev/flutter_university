@@ -4,7 +4,7 @@ class HomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    var widgetList = ["Text", "Stack", "Row" ];
+    var widgetList = ["Text", "Stack", "Row", "Calendar" ];
 
     return Scaffold(
       appBar: AppBar(

@@ -14,7 +14,7 @@ class RowWidget extends StatelessWidget{
         body: Container(
           color: Colors.yellow,
           child: Row(
-            mainAxisSize: MainAxisSize.min,
+//            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               FlutterLogo(
                 size: 100.0,
