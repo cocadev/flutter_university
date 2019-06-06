@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/theme.dart' as Theme;
 import '../utils/localization.dart';
-import '../shared/btn.dart';
 
 class Intro extends StatelessWidget {
   @override
@@ -18,11 +17,11 @@ class Intro extends StatelessWidget {
               sliver: SliverList(
                 delegate: SliverChildListDelegate(
                   <Widget>[
-                    Image(image: icApp, width: 48.0, height: 48.0),
+                    Image(image: icApp, width: 100.0, height: 100.0),
                     Container(
                       margin: const EdgeInsets.only(top: 6.0),
                       child: Text(
-                        'Talk Talk',
+                        'Firebase Cloud Messaging',
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
