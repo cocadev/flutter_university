@@ -4,6 +4,10 @@ import 'router.dart';
 import 'WidgetUniversity/text_widget.dart';
 import 'WidgetUniversity/stack_widget.dart';
 import 'WidgetUniversity/row_widget.dart';
+import 'WidgetUniversity/shape_widget.dart';
+import 'WidgetUniversity/constraints_widget.dart';
+import 'WidgetUniversity/buttons_widget.dart';
+
 import 'Samples/Calendar/main.dart';
 
 void main() => runApp(new MyApp());
@@ -24,6 +28,10 @@ class MyApp extends StatelessWidget {
         'Stack': (BuildContext context) => StackWidget(),
         'Row': (BuildContext context) => RowWidget(),
         'Calendar': (BuildContext context) => CalendarApp(),
+        'Shape': (BuildContext context) => ShapeWidget(),
+        'Constraint': (BuildContext context) => ConstraintWidget(),
+        'Buttons': (BuildContext context) => ButtonsWidget(),
+
       },
     );
   }

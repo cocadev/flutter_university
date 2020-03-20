@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var widgetList = ["Text", "Stack", "Row", "Calendar"];
+    var widgetList = ["Text", "Shape", "Constraint", "Stack", "Row", "Calendar", "Buttons"];
 
     return Scaffold(
       appBar: AppBar(

@@ -5,15 +5,11 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Text(
-          "Hello Eugene How are you",
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 50.0,
-              fontWeight: FontWeight.w200,
-          ),
-        ),
+      body:  Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.all(125.0),
+        decoration: FlutterLogoDecoration(),
       ),
     );
   }
