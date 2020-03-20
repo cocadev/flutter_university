@@ -5,7 +5,6 @@ import 'WidgetUniversity/text_widget.dart';
 import 'WidgetUniversity/stack_widget.dart';
 import 'WidgetUniversity/row_widget.dart';
 import 'Samples/Calendar/main.dart';
-import 'FirebaseChat/main.dart';
 
 void main() => runApp(new MyApp());
 
@@ -25,7 +24,6 @@ class MyApp extends StatelessWidget {
         'Stack': (BuildContext context) => StackWidget(),
         'Row': (BuildContext context) => RowWidget(),
         'Calendar': (BuildContext context) => CalendarApp(),
-        'Chat': (BuildContext context) => ChatApp(),
       },
     );
   }
