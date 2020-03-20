@@ -8,7 +8,7 @@ class StackWidget extends StatelessWidget{
       body: Container(
         height: 400.0,
         width: 350.0,
-        //color: Colors.yellow,
+        color: Colors.yellow,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Stack(

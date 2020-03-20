@@ -7,19 +7,11 @@ class TextWidget extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Text(
-          "Hello It is Awesome WOW",
-          textAlign: TextAlign.right,
-          textDirection: TextDirection.rtl,
-          overflow: TextOverflow.ellipsis,
-          maxLines: 2,
+          "Hello Eugene How are you",
           style: TextStyle(
               color: Colors.black,
               fontSize: 50.0,
               fontWeight: FontWeight.w200,
-              letterSpacing: 2.0,
-              wordSpacing: 40.0,
-              decoration: TextDecoration.overline,
-              decorationStyle: TextDecorationStyle.wavy
           ),
         ),
       ),
